@@ -22,7 +22,7 @@ class addUserPage:
     addPassword = (By.XPATH, "//div[./div/label[text()='Password']]//input")
     addCPassword = (By.XPATH, "//div[./div/label[text()='Confirm Password']]//input")
     btnSave = (By.XPATH, "//div[@class = 'oxd-form-actions']/button[2]")
-    RecordText = (By.XPATH,"//span[text()=' (9) Records Found']")
+    RecordText = (By.XPATH, "//span[@class='oxd-text oxd-text--span']")
 
     def clickAdmin(self):
         return self.driver.find_element(*addUserPage.adminbtn)

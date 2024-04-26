@@ -25,11 +25,10 @@ class TestValidateAddUser(BaseClass):
         adminUser.addPass().send_keys(getData["Paswrd"])
         adminUser.addCPass().send_keys(getData["Cpaswrd"])
         adminUser.saveBtnClick().click()
-        ExpectedText = "Records Found"
         self.verifyClickElement(addUserPage.adminbtn)
-
         ActualText = adminUser.textValidate().text
         print(ActualText)
+        assert "Records Found" in ActualText
         time.sleep(5)
 
     @pytest.fixture(params=DataLoginPage.getTestData("addUser"))
